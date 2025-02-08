@@ -44,4 +44,7 @@ jobs:
         run: npm install -g htmlhint
       
       - name: Test for html
+        run: htmlhint "home.html"
+
+      - name: Test for html
         run: htmlhint "index.html"
