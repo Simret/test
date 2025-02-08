@@ -35,5 +35,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+      - name: npm setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install htmhint for testing
+        run: npm install -g htmlhint
+      
       - name: Test for html
         run: htmlhint "index.html"
